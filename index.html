@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="assets/img//icon.png" rel="icon" />
+    <link href="assets/styles.css" rel="stylesheet" />
+    <link href="assets/blur.css" rel="stylesheet" />
+    <title>Text Encriptor</title>
+</head>
+
+<body>
+    <h1>
+        <img class="logo" src="/assets/img/logo.png" alt="Logo de Alura" />
+    </h1>
+
+    <main class="container">
+        <aside class="aside__left">
+            <textarea id="textarea" class="input" cols="30" rows="17" autofocus
+                placeholder="Ingrese su Texto Aquí"></textarea>
+            <div class="nota">
+                <img class="symbol" src="assets/img/warning.png" alt="Simbolo de Admiración">&nbsp; &nbsp; <span class="symbol-text">Solo
+                    letras minúsculas y sin acentos</span>
+            </div>
+            <div class="botones__container">
+                <button class="botones encriptar" onclick="encriptar()">Encriptar</button>&nbsp; &nbsp; &nbsp;<button
+                    class="botones desencriptar" onclick="desencriptar()">Desencriptar</button>
+            </div>
+        </aside>
+
+        <aside class="aside__right">
+
+            <div id="empty" class="aside__right--empty show-empty">
+                <img class="banner" src="assets/img/empty.png" alt="Imagen de muñeco con Lupa">
+                <h2 class="titulo__parrafo">Ningún Mensaje fue Encontrado</h2>
+                <p class="parrafo">Ingresa el Texto que Deseas Encriptar o Desencriptar</p>
+            </div>
+            <div id="content" class="blur__container hide-content">
+
+                <div class="container__header">
+                    <h2 class="container__header--text encript">
+                        <span>Gracias por Usar Nuestro Encriptador.</span>
+                        &nbsp; &nbsp;
+                        <spa>Gracias por Usar Nuestro Encriptador.</span>
+                        &nbsp; &nbsp; &nbsp;
+                        <spa>Gracias por Usar Nuestro Encriptador.</span>
+                    </h2>
+                </div>
+
+                <div class="container__text">
+                    <p id="text__content"><!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, voluptatem modi eum placeat
+                        impedit ullam in eligendi sapiente, iste obcaecati tempora culpa? Aperiam vitae debitis tempora
+                        molestiae reprehenderit! Porro, veniam. --></p>
+                </div>
+
+                <div class="blur__footer">
+                    <button onclick="copy()" class="botones desencriptar">Copiar</button>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text"> Developed By &copy;Moises Barilla &nbsp; 2022</p>
+        <div class="footer__container">
+            <a class="enlace" href="https://www.linkedin.com/in/moises-barilla/">
+                <img class="footer__img" src="assets/img/linkedin.png" alt="LinkedIn logo">
+            </a>
+            <a class="enlace" href="https://github.com/MoiBarilla/">
+                <img class="footer__img" src="assets/img/github.png" alt="Github Logo">
+            </a>
+            <a class="enlace" href="">
+                <img class="footer__img" src="assets/img/facebook.png" alt="Facebook Logo">
+            </a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
