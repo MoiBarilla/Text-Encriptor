@@ -6,9 +6,16 @@ let i = "imes";
 let o = "ober";
 let u = "ufat";
 
-let textArea = document.getElementById("textarea").value;
+let textArea = document.getElementById("textarea");
 
 let textContainer = document.getElementById("text__content");
+
+//LIMPIAR EL TEXTAREA | CLEAN THE TEXTAREA 
+
+function cleanTextArea() {
+  document.getElementById("textarea").value = '';
+  
+} 
 
 //TOGGLE PARA EL ASIDE DERECHO | ASIDE RIGHT TOGGLE
 
@@ -22,6 +29,7 @@ function toggleAsideRight() {
     let content = document.getElementById("content");
     content.classList.remove("hide-content");
     content.classList.add("show-content");
+    cleanTextArea();
   }
   return;
 }
