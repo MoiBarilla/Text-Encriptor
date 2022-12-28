@@ -14,7 +14,7 @@ let textContainer = document.getElementById("text__content");
 
 function cleanTextArea() {
   document.getElementById("textarea").value = '';
-  
+  document.getElementById("textarea").focus();
 } 
 
 //TOGGLE PARA EL ASIDE DERECHO | ASIDE RIGHT TOGGLE
@@ -30,35 +30,38 @@ function toggleAsideRight() {
     content.classList.remove("hide-content");
     content.classList.add("show-content");
     cleanTextArea();
+    return;
   }
-  return;
+
 }
 
 // BOTÓN ENCRIPTAR | ENCRIPT BUTTON
 
 function encriptar() {
   toggleAsideRight();
-  
+  if (textArea.length >= 1) {
   textArea = textArea.replaceAll("e", e);
   textArea = textArea.replaceAll("i", i);
   textArea = textArea.replaceAll("a", a);
   textArea = textArea.replaceAll("o", o);
   textArea = textArea.replaceAll("u", u);
-
+  
   return textContainer.innerHTML = textArea;
+  }
 }
 
 //BOTON DESENCRIPTAR | DECRIPT BUTTON
 function desencriptar() {
   toggleAsideRight();
-
+  if (textArea.length >= 1) {
   textArea = textArea.replaceAll(a, "a");
   textArea = textArea.replaceAll(e, "e");
   textArea = textArea.replaceAll(i, "i");
   textArea = textArea.replaceAll(o, "o");
   textArea = textArea.replaceAll(u, "u");
-
+  
   return textContainer.innerHTML = textArea;
+  }
 }
 
 //BOTON DE COPIAR | COPY BUTTON
